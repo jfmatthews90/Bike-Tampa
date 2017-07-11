@@ -1,14 +1,86 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsApp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <title>Bike Tampa</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
   <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="project-name navbar-brand">
+            <a href="#">Bike Tampa</a>
+          </div> <!--/Project-name -->
+        </div> <!-- /Navbar-header -->
+        <div class="navbar-collapse collapse">
+          <!-- future logo here -->   
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bicycles<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" class="scroll-nav">View Catalogue</a>
+                </li>
+                <li>
+                  <a href="#" class="button" target="_blank">Model 1</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" >model 2</a>
+                </li>
+                <li>
+                  <a href="#" class="scroll-nav">Model 3</a>
+                </li>
+              </ul>
+            </li> 
+            <li><a href="#">About</a></li> 
+            <li><a href="#">Contact</a></li>
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Learn More<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#" class="scroll-nav">FAQ</a>
+                </li>
+                <li>
+                  <a href="#" class="scroll-nav">Social Media</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div> <!-- /Navbar-collapse -->
+      </div> <!-- /Container-fluid --> 
+    </nav> <!-- /Navbar -->
+
     <%= yield %>
+
+    <footer class="footer">
+    	<h4>&copy; 2017 Bike Tampa</h4>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap core JS -->   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- /bootstrap core JS -->
+
   </body>
 </html>
