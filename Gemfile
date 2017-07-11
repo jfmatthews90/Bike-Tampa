@@ -48,3 +48,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Downgraded coffee-script from 1.12.1 to 1.8.0 in order to run the website on localhost:3000
+gem 'coffee-script-source', '= 1.8.0'
