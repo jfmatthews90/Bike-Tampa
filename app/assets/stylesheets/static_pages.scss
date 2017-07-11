@@ -1,3 +1,31 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// SCSS variables
+$font: Helvetica, arial, sans-serif; 
+
+// General project CSS code
+
+
+body {
+	background-color: #eee;
+	margin: 60px;
+}
+
+.nav>li {
+	letter-spacing: .15em;
+}
+
+.nav>li>a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-family: $font;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+}
