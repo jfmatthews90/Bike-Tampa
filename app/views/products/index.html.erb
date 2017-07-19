@@ -43,6 +43,11 @@
         <p><%= product.description %></p>
         <p><%= product.color %></p>
         <strong><%= product.price %></strong>
+        <div class="SED">
+          <%= link_to 'Show', product %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
       </div> <!-- /col -->
     <% end %>       
   </div>

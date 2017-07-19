@@ -1,7 +1,8 @@
 <!-- New dynamic landing page to replace static index.html.erb page -->
 
-<h3>Featured Product:</h3>
+<h3>Bike of the Month</h3>
 <br>
 <h4><%= @featured_product.name %></h4>
-<img src="https://coolbikeberlin.herokuapp.com/assets/cs26_mustard_retina-b68afb06cc98f141c5bdad8187b18e344e33c76af65f402dbe8dc59dc2b8390d.jpg" class="img-responsive featured-image">
-<p><%= @featured_product.description %><p>
+<%= image_tag @featured_product.image_url %>
+<p><%= @featured_product.description %></p>
+<p><%= @featured_product.price %></p>
