@@ -69,6 +69,14 @@
             </li>
           </ul>
         </div> <!-- /Navbar-collapse -->
+        <!-- Search Bar -->
+        <div class="search-bar">
+					<%= form_with(url: products_path, method: 'get') do |form| %>
+
+					  <%= form.text_field :q, id: 'q', value: params[:q] %>
+					  <%= form.submit 'Search' %>
+					<% end %>
+				</div>	<!-- /Search Bar -->
       </div> <!-- /Container-fluid --> 
     </nav> <!-- /Navbar -->
 
