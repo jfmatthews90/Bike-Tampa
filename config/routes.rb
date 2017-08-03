@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
-	#root 'static_pages#landing_page' 
-	#commented out for 5.1 task
-	root 'static_pages#index'
+	root 'static_pages#landing_page' 
+	#commented out to move on into task 5.2
+	#root 'static_pages#index'
 	
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
