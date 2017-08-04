@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
+  get 'products/index'
+
 	root 'static_pages#landing_page' 
 	#commented out to move on into task 5.2
 	#root 'static_pages#index'
