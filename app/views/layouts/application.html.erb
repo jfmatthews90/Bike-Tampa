@@ -30,6 +30,14 @@
           <div class="project-name navbar-brand">
             <a href="/">Bike Tampa</a>
           </div> <!--/Project-name -->
+          <!-- Search bar -->
+          <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"> 
+          	<div class="form-group">
+           	  <label class="hidden" for="q">Search for:</label>
+          	  <input type="text" name="q" id="q" value="" class="form-control" placeholder="Search">
+        	  </div>
+        		<input type="submit" name="commit" value="Search" class="btn btn-default" data-disable-with="Search">
+					</form> <!-- /Search bar -->
         </div> <!-- /Navbar-header -->
         <div class="navbar-collapse collapse">
           <!-- future logo here -->   
@@ -69,14 +77,6 @@
             </li>
           </ul>
         </div> <!-- /Navbar-collapse -->
-        <!-- Search Bar -->
-        <div class="search-bar">
-					<%= form_with(url: products_path, method: 'get') do |form| %>
-
-					  <%= form.text_field :q, id: 'q', value: params[:q] %>
-					  <%= form.submit 'Search' %>
-					<% end %>
-				</div>	<!-- /Search Bar -->
       </div> <!-- /Container-fluid --> 
     </nav> <!-- /Navbar -->
 
