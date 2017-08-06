@@ -89,6 +89,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  #ActionMailer for SendGrid for ability to send emails via Heroku
   ActionMailer::Base.smtp_settings = {
     address: 'smtp.sendgrid.net',
     port: '587',
