@@ -41,6 +41,10 @@ gem 'jquery-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Allows user authentication for registering, sign in, and sign out
+# Can be customized for additional features
+gem 'devise'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 

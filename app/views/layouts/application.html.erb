@@ -30,6 +30,7 @@
           <div class="project-name navbar-brand">
             <a href="/">Bike Tampa</a>
           </div> <!--/Project-name -->
+
           <!-- Search bar -->
           <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"> 
           	<div class="form-group">
@@ -38,6 +39,7 @@
         	  </div>
         		<input type="submit" name="commit" value="Search" class="btn btn-default" data-disable-with="Search">
 					</form> <!-- /Search bar -->
+
         </div> <!-- /Navbar-header -->
         <div class="navbar-collapse collapse">
           <!-- future logo here -->   
@@ -75,10 +77,25 @@
                 </li>
               </ul>
             </li>
-          </ul>
+
+            <!-- User log in/sign out tab -->
+						<ul class="nav pull-right">
+						  <li>
+						  <% if user_signed_in? %>
+						    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+						  <% else %>
+						    <%= link_to('Login', new_user_session_path) %>
+						  <% end %>
+						  </li> <!-- /User sign in/out -->
+						</ul> <!-- /Nav pull-right -->          
+          </ul> <!-- /Navbar-right -->
         </div> <!-- /Navbar-collapse -->
       </div> <!-- /Container-fluid --> 
     </nav> <!-- /Navbar -->
+
+    <!-- Flash tags for Welcome Message upon user sign-in -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
 	  <%= yield %>
 
