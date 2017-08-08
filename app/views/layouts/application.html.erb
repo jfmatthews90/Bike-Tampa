@@ -31,15 +31,8 @@
             <%= link_to "Bike Tampa", root_path %>
           </div> <!--/Project-name -->
 
-          <!-- Search bar -->
-          <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"> 
-          	<div class="form-group">
-           	  <label class="hidden" for="q">Search for:</label>
-          	  <input type="text" name="q" id="q" value="" class="form-control" placeholder="Search">
-        	  </div>
-        		<input type="submit" name="commit" value="Search" class="btn btn-default" data-disable-with="Search">
-					</form> <!-- /Search bar -->
-					
+
+
         </div> <!-- /Navbar-header -->
         <div class="navbar-collapse collapse">
           <!-- future logo here -->   
@@ -82,6 +75,14 @@
               </ul>
             </li>
           </ul>
+        <ul class='nav navbar-nav navbar-right'>  
+          <li>
+            <%= form_tag products_path, :method => "GET" do %>
+
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search", class: 'btn btn-default') %>
+            <% end %>    
+          </li>          
         </div> <!-- /Navbar-collapse -->
       </div> <!-- /Container-fluid --> 
     </nav> <!-- /Navbar -->
