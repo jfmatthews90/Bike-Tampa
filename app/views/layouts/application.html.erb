@@ -28,7 +28,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="project-name navbar-brand">
-            <a href="/">Bike Tampa</a>
+            <%= link_to "Bike Tampa", root_path %>
           </div> <!--/Project-name -->
           <!-- Search bar -->
           <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"> 
@@ -42,13 +42,13 @@
         <div class="navbar-collapse collapse">
           <!-- future logo here -->   
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/static_pages/index">Home</a></li>
+            <li><%= link_to "Home", static_pages_index_path %></li>
             <li role="presentation" class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bicycles<span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="/products" class="scroll-nav">View Catalogue</a>
+                  <%= link_to "Products", products_path %>
                 </li>
                 <li>
                 	<%= link_to "Model 1", product_path(1) %>                  
@@ -61,8 +61,8 @@
                 </li>
               </ul>
             </li> 
-            <li><a href="/static_pages/about">About</a></li> 
-            <li><a href="/static_pages/contact">Contact</a></li>
+            <li><%= link_to "About", static_pages_about_path %></li> 
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
             <li role="presentation" class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Learn More<span class="caret"></span>
               </a>
