@@ -7,7 +7,7 @@
 <div class="container-fluid">
   <div class="row">
       <% @products.each do |product| %>
-        <%= render partial: 'product', locals: {product: product } %>
+        <%= render product %>
       <% end %>       
   </div> <!-- /row -->
 </div> <!-- /container-fluid -->
