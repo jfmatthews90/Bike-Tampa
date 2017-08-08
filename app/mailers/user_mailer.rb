@@ -8,4 +8,19 @@ class UserMailer < ApplicationMailer
          to: 'jfmatthews90@gmail.com',
          subject: "A new contact form message from #{name}")
   end
+
+  def welcome(user)
+    @user = user
+      mail(:from => 'jfmatthews90@gmail.com',
+          :to => user.email,
+          :subject => "Welcome to Bike Tampa!")
+  end
+
+  def order_placed(user, product)
+    @user = user
+    @product = product
+    mail(:from => 'jfmatthews90@gmail.com',
+        :to => user.email,
+        :subject => "Your order of the #{product.name} bike has been placed.")
+  end	
 end
