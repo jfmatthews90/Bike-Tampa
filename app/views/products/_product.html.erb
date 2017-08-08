@@ -4,11 +4,13 @@
   <a href="#"><h3><%= product.name %></h3></a>
   <p><%= product.description %></p>
   <p><%= product.colour %></p>
-  <strong><%= product.price %></strong>
+  <p><strong><%= product.price %></strong><p>
   <div class="SED">
-    <%= link_to 'Show', product %>
-    <%= link_to 'Edit', edit_product_path(product) %>
-    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  	<ul>
+	    <li><%= link_to 'Show', product %></li>
+	    <li><%= link_to 'Edit', edit_product_path(product) %></li>
+	    <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
   </div> <!-- /SED -->
 </div> <!-- /col -->
 
