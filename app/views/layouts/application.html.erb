@@ -82,12 +82,27 @@
                   <a href="#" class="scroll-nav">Social Media</a>
                 </li>
               </ul>
-            </li> 
-            -->
-          </ul>
+            </li>
+
+            <!-- User log in/sign out tab -->
+						<ul class="nav pull-right">
+						  <li>
+						  <% if user_signed_in? %>
+						    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+						  <% else %>
+						    <%= link_to('Login', new_user_session_path) %>
+						  <% end %>
+						  </li> <!-- /User sign in/out -->
+						</ul> <!-- /Nav pull-right -->          
+          </ul> <!-- /Navbar-right -->
+          
         </div> <!-- /Navbar-collapse -->
       </div> <!-- /Container-fluid --> 
     </nav> <!-- /Navbar -->
+
+    <!-- Flash tags for Welcome Message upon user sign-in -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
 	  <%= yield %>
 
