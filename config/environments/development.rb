@@ -31,6 +31,9 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+    # So any dynamic links that show up inside emails from your development environment generate the right URLs.
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -51,4 +54,5 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
 end
