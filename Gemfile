@@ -28,18 +28,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'coffee-script-source', '= 1.8.0'
 # Jquery-rails gem
 gem 'jquery-rails'
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Allows user authentication for registering, sign in, and sign out
-# Can be customized for additional features
-gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.11'
 
 # gem 'bcrypt', platforms: :ruby
-gem 'bcrypt', '3.1.11', platforms: [:ruby, :x64_mingw]
+# gem 'bcrypt', '3.1.11', platforms: [:ruby, :x64_mingw]
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -69,4 +64,12 @@ end
 group :development, :test do
 	gem 'sqlite3'
 end 
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Allows user authentication for registering, sign in, and sign out
+# Can be customized for additional features
+gem 'devise'
+gem 'bcrypt', platforms: :ruby
 
