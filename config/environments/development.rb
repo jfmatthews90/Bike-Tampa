@@ -31,7 +31,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-    # So any dynamic links that show up inside emails from your development environment generate the right URLs.
+  # So any dynamic links that show up inside emails from your development environment generate the right URLs.
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   # Print deprecation notices to the Rails logger.

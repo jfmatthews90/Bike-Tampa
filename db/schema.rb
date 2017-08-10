@@ -47,7 +47,6 @@ create_table "users", force: true do |t|
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-
   end
 
 end

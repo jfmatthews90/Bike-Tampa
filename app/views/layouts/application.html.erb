@@ -102,8 +102,15 @@
     </nav> <!-- /Navbar -->
 
     <!-- Flash tags for Welcome Message upon user sign-in -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <div class="alert alert-info">
+        <%= notice %>
+      </div>
+    <% elsif alert %>
+      <div class="alert alert-warning">
+        <%= alert %>
+      </div>
+    <% end %>
 
 	  <%= yield %>
 
