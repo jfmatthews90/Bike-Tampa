@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'coffee-script-source', '= 1.8.0'
 # Jquery-rails gem
 gem 'jquery-rails'
+# Allows unique authorization privileges for users and admins to be established
+gem 'cancancan', '~> 1.10'
 
 
 # Use ActiveModel has_secure_password
