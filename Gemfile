@@ -31,7 +31,6 @@ gem 'jquery-rails'
 # Allows unique authorization privileges for users and admins to be established
 gem 'cancancan', '~> 1.10'
 
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.11'
 
