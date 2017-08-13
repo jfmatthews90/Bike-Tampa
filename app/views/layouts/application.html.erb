@@ -69,34 +69,14 @@
             <li>
            	 <%= link_to "Contact", static_pages_contact_path %>
             </li>
-
-            <!-- Removed until pages have been developed.
-            <li role="presentation" class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Learn More<span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="#" class="scroll-nav">FAQ</a>
-                </li>
-                <li>
-                  <a href="#" class="scroll-nav">Social Media</a>
-                </li>
-              </ul>
-            </li>
-						-->
-						
-            <!-- User log in/sign out tab -->
-						<ul class="nav log-in pull-right">
-						  <li>
-						  <% if user_signed_in? %>
-						    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+						<li> <!-- User log in/sign out tab -->
+							<% if user_signed_in? %>
+							  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 						  <% else %>
 						    <%= link_to('Login', new_user_session_path) %>
-						  <% end %>
-						  </li> <!-- /User sign in/out -->
-						</ul> <!-- /Nav pull-right -->          
+						  <% end %>        
+						</li> <!-- /User log in/out tab -->
           </ul> <!-- /Navbar-right -->
-          
         </div> <!-- /Navbar-collapse -->
       </div> <!-- /Container-fluid --> 
     </nav> <!-- /Navbar -->
