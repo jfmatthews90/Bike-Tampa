@@ -1,41 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="show"> 
+    <p id="notice"><%= notice %></p>
+    <div class="row">
+      <div class="col-sm-9 col-md-9">
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+        <p>
+          <%= image_tag(@product.image_url, class: "img-responsive") %>
+        </p>
+      </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <div class="col-sm-3 col-md-3">
+        <p>
+          <strong>Name:</strong>
+          <%= @product.name %>
+        </p>
+      
+        <p>
+         <strong>Description:</strong>
+          <%= @product.description %>
+        </p>
+      
+        <p>
+          <strong>Colour:</strong>
+          <%= @product.colour %>
+        </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+        <p>
+          <strong>Price:</strong>
+          <%= @product.price %>
+        </p>
 
-<p>
-	<strong>Colour:</strong>
-	<%= @product.colour %>
-</p>
+        <p><strong>Highest Rating Comment</strong></p>
+          <% if @product.highest_rating_comment %>
+            <%= @product.highest_rating_comment.body %>
+          <% end %>
 
-<p>
-	<strong>Price:</strong>
-	<%= @product.price %>
-</p>
+        <p><strong>Lowest Rating Comment</strong></p>
+          <% if @product.lowest_rating_comment %>
+            <%= @product.lowest_rating_comment.body %>
+          <% end %>
+        <br> 
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /show -->
+</div> <!-- /container -->
 
-<p><strong>Highest Rating Comment</strong></p>
- <% if @product.highest_rating_comment %>
-  <%= @product.highest_rating_comment.body %>
- <% end %>
 
-<p><strong>Lowest Rating Comment</strong></p>
-  <% if @product.lowest_rating_comment %>
-    <%= @product.lowest_rating_comment.body %>
-  <% end %>
-
- <br> 
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  <br>
+  <a class="btn btn-default" href="/products">Back to products</a>
