@@ -32,7 +32,7 @@
 
         <p>
           <strong>Average Rating:</strong> 
-          <div class="rated" data-score="<%= @product.average_rating %>"></div> <!-- moving ERB outside dive shows it on page --> <%= @product.average_rating %>
+          <div class="rated" data-score="<%= @product.average_rating %>"></div> <!-- moving ERB outside dive shows it on page -->
         </p>
 
         <!-- trying to get star system to work
@@ -47,6 +47,8 @@
             <%= @product.lowest_rating_comment.body %>
           <% end %>
         <br> 
+
+        <!-- old spot for new comment erb -->
 
       </div> <!-- /col -->
     </div> <!-- /row -->
