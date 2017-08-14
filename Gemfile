@@ -26,6 +26,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Downgraded coffee-script from 1.12.1 to 1.8.0 in order to run the website on localhost:3000
 gem 'coffee-script-source', '= 1.8.0'
+# Allows pagination to reduce page length and DB queries for quicker site performance
+gem 'will_paginate', '~> 3.1.0'
 # Jquery-rails gem
 gem 'jquery-rails'
 # Allows unique authorization privileges for users and admins to be established
