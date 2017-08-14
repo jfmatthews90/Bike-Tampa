@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!, except: [:index, :show]
 
   # GET /products
   # GET /products.json
@@ -16,6 +17,7 @@ end
   # GET /products/1.json
   def show
     @products = Product.find(params[:id])
+    @comments = @product.comments.order("created_at DESC")
   end
 
   # GET /products/new
