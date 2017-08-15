@@ -58,6 +58,9 @@
 <br>
 
 <%= render 'comments' %>
+<%= will_paginate @comments %>
+
+<br>
 
 <a class="btn btn-default" href="/products">Back to products</a>
 <%= link_to 'Edit', edit_product_path(@product) %> |
