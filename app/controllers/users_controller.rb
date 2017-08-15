@@ -40,11 +40,6 @@ class UsersController < ApplicationController
     end
   end
 
-    after_create :send_welcome_mail
-  def send_welcome_mail
-     Contact.welcome_email(self.email, self.name).deliver
-  end
-
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
