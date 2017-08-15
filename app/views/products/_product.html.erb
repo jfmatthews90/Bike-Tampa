@@ -6,11 +6,13 @@
   <p><%= product.colour %></p>
   <p><strong><%= number_to_currency(product.price) %></strong><p>
   <div class="SED">
-  	<ul>
-	    <li><%= link_to 'Show', product %></li>
-	    <li><%= link_to 'Edit', edit_product_path(product) %></li>
-	    <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-    </ul>
+    <% if signed_in? && current_user.admin? %>
+    	<ul>
+  	    <li><%= link_to 'Show', product %></li>
+  	    <li><%= link_to 'Edit', edit_product_path(product) %></li>
+  	    <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      </ul>
+    <% end %>  
   </div> <!-- /SED -->
 </div> <!-- /col -->
 
