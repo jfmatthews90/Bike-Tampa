@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
   #before_filter :is_correct_user?
+  before_action :is_admin?, only: [:new, :create, :edit, :update, :destroy, :index]
   load_and_authorize_resource
 
   # GET /users

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     delete 'logout', to: 'devise/sessions#destroy'
   end
 
-  # Below for all other routes:
   devise_for :users, :controllers => { registrations: 'registrations' }
   
   resources :users
