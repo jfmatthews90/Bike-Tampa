@@ -20,6 +20,7 @@ end
     @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: 3) #The paginate code defining the number of comment per page.
   end
 
+
   # GET /products/new
   def new
     @product = Product.new

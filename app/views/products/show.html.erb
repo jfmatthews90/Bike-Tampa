@@ -30,7 +30,7 @@
           <%= number_to_currency(@product.price) %>
         </p>
 
-        <p>
+        <p id="#average-rating">
           <strong>Average Rating:</strong> 
           <div class="rated" data-score="<%= @product.average_rating %>"></div> <!-- moving ERB outside dive shows it on page --> 
         </p>
