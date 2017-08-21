@@ -15,4 +15,13 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+
+  $('.img-zoom').elevateZoom({
+    zoomType: "lens", 
+    lensShape: "square", 
+    responsive: true,
+    zoomWindowFadeIn: 500,
+    zoomWindowFadeOut: 750,
+    scrollZoom: true
+  });
 });
