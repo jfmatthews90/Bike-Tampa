@@ -42,6 +42,8 @@ gem 'stripe'
 gem 'brakeman', :require => false
 # Dalli for memcached store
 gem 'dalli'
+# Redis for more advanced caching options
+gem 'redis-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,6 +53,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails', '~>4.0'
+  gem 'newrelic_rpm'
 end
 
 group :development do
