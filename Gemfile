@@ -40,6 +40,8 @@ gem 'rails-controller-testing'
 gem 'stripe'
 # Brakeman to test for security threats in the app
 gem 'brakeman', :require => false
+# Dalli for memcached store
+gem 'dalli'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
