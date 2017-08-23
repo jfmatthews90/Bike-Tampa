@@ -10,8 +10,12 @@ $font: Helvetica, arial, sans-serif;
 
 body {
 	background-color: #eee;
-	margin: 60px;
-	padding-top: 5em;
+}
+
+.carousel,
+.products-page {
+	width: 80%;
+	margin: auto;
 }
 
 .nav>li {
@@ -28,6 +32,7 @@ h1 {
 }
 
 footer {
+	width: 100%;
 	text-align: center;
 	background-color: orange;
 }

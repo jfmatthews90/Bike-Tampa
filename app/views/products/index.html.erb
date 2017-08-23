@@ -2,17 +2,18 @@
 <br>
 <h1>Products</h1>
 <br>
+<div class="products-page">
 	<div class="container-fluid">
 	  <div class="row">
-	      <% @products.each do |product| %>
-	      	<% cache product do %>
-	        	<%= render product %>
-	      	<% end %> <!-- /cache -->		
-	      <% end %> <!-- /product do -->
+	    <% @products.each do |product| %>
+		   	<% cache product do %>
+		     	<%= render product %>
+		   	<% end %> <!-- /cache -->		
+	    <% end %> <!-- /product do -->
 	  </div> <!-- /row -->
 	</div> <!-- /container-fluid -->
-<br>
-<% if signed_in? && current_user.admin? %>
-	<%= link_to 'New Product', new_product_path %>
-<% end %> <!-- /new product link -->
-
+	<br>
+	<% if signed_in? && current_user.admin? %>
+		<%= link_to 'New Product', new_product_path %>
+	<% end %> <!-- /new product link -->
+</div>
