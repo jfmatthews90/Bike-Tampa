@@ -2,18 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// SCSS variables
-$font: Helvetica, arial, sans-serif; 
-
-// General project CSS code
 
 
 body {
 	background-color: #eee;
+	font-family: Helvetica;
 }
 
-.carousel,
-.products-page {
+.content  {
 	width: 80%;
 	margin: auto;
 }
@@ -27,7 +23,13 @@ body {
 }
 
 h1 {
-	font-family: $font;
+	text-align: center;
+	margin-top: 2.5em;
+	font-family: Georgia;
+}
+
+h3 {
+	font-family: Georgia;
 	text-align: center;
 }
 
@@ -41,3 +43,6 @@ footer {
     margin: 0 auto;
 }
 
+.product-flyer {
+	margin: auto;
+}

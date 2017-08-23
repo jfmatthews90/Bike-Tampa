@@ -1,9 +1,8 @@
-<h1>Contact Bike Tampa</h1>
-
+<h1>Contact Us</h1>
 <div>
   <%= flash[:notice] %>
   <%= form_tag('/static_pages/thank_you') do %>
-    <div class="contact-form">
+    <div class="contact-form content">
         <div class="form-group">
           <%= label_tag :name %>
           <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", :required=> "required" %>
