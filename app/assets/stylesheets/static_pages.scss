@@ -31,10 +31,12 @@ h1 {
 h3 {
 	font-family: Georgia;
 	text-align: center;
+	color: black;
 }
 
 footer {
 	width: 100%;
+	margin-top: 2em;
 	text-align: center;
 	background-color: orange;
 }
@@ -43,3 +45,11 @@ footer {
     margin: 0 auto;
 }
 
+.contact-form {
+	width: 60%;
+	margin: auto;
+}
+
+.send-button {
+	text-align: right;
+}
