@@ -8,6 +8,7 @@ body {
 	padding-top: 55px;
 	background-color: #eee;
 	font-family: Helvetica;
+	padding-bottom: 50px;
 }
 
 .content  {
@@ -40,9 +41,10 @@ footer {
 	position: fixed; 
 	bottom: 0px;
 	width: 100%;
-	margin-top: 3em;
+
 	text-align: center;
-	background-color: #538cc6;
+	color: #9d9d9d;
+	background-color: #222;
 }
 
 .carousel-inner > .item > img {
