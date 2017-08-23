@@ -5,6 +5,7 @@
 
 
 body {
+	padding-top: 55px;
 	background-color: #eee;
 	font-family: Helvetica;
 }
@@ -35,17 +36,21 @@ h3 {
 }
 
 footer {
+	z-index: 5000;
+	position: fixed; 
+	bottom: 0px;
 	width: 100%;
-	margin-top: 2em;
+	margin-top: 3em;
 	text-align: center;
-	background-color: orange;
+	background-color: #538cc6;
 }
 
 .carousel-inner > .item > img {
     margin: 0 auto;
 }
 
-.contact-form {
+.contact-form,
+.about {
 	width: 60%;
 	margin: auto;
 }

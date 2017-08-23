@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <!-- jQuery library -->
+    <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- JS -->
+    <!-- js -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
   <body>
 
-    <!-- Navbar -->
+    <!-- navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -32,18 +32,18 @@
           </button>
           <div class="project-name navbar-brand">
             <%= link_to "Bike Tampa", root_path %>
-          </div> <!--/Project-name -->
+          </div> <!--/project-name -->
 
-          <!-- Search bar -->
+          <!-- search bar -->
           <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"> 
           	<div class="form-group">
            	  <label class="hidden" for="q">Search for:</label>
           	  <input type="text" name="q" id="q" value="" class="form-control" placeholder="Search">
         	  </div>
         		<input type="submit" name="commit" value="Search" class="btn btn-default" data-disable-with="Search">
-					</form> <!-- /Search bar -->
+					</form> <!-- /search bar -->
+        </div> <!-- /navbar-header -->
 
-        </div> <!-- /Navbar-header -->
         <div class="navbar-collapse collapse">
           <!-- future logo here -->   
           <ul class="nav navbar-nav navbar-right">
@@ -72,44 +72,26 @@
             <li>
            	 <%= link_to "Contact", static_pages_contact_path %>
             </li>
-						<li> <!-- User log in/sign out tab -->
+						<li> <!-- user log in/sign out tab -->
 							<% if user_signed_in? %>
 							  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 						  <% else %>
 						    <%= link_to('Login', new_user_session_path) %>
 						  <% end %>        
-						</li> <!-- /User log in/out tab -->
+						</li> <!-- /user log in/out tab -->
+            <!--
 						<li>
 							<a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">
                 <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
               </a>
+            -->
             </li> <!-- /search glyphy -->
-          </ul> <!-- /Navbar-right -->
-        </div> <!-- /Navbar-collapse -->
-      </div> <!-- /Container-fluid --> 
-    </nav> <!-- /Navbar -->
-    <!--
-    <div id="modalSearch" class="modal fade in" role="dialog" style="display: block; padding-right: 17px;">
-      <div class="modal-dialog modal-sm">
-      <!- Modal content->
-      	<div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">×</button>
-            <h4 class="modal-title">Search</h4>
-          </div>
-          <div class="modal-body">
-          <!- Add the modal body here ->
-            <form class="input-group" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
-              <!-<label for="q">Search for:</label>->
-            	<input type="text" name="q" id="q" value="" placeholder="  Search...">
-            	<input type="submit" name="commit" value="Search" class="btn btn-default" data-disable-with="Search">
-						</form>                     
-					</div>      
-     	  </div>
-      </div>
-    </div>
-    -->
-    <!-- Flash tags for Welcome Message upon user sign-in -->
+          </ul> <!-- /navbar-right -->
+        </div> <!-- /navbar-collapse -->
+      </div> <!-- /container-fluid --> 
+    </nav> <!-- /navbar -->
+
+    <!-- flash tags for Welcome Message upon user sign-in -->
     <% if notice %>
       <div class="alert alert-info">
         <%= notice %>
@@ -118,14 +100,13 @@
       <div class="alert alert-warning">
         <%= alert %>
       </div>
-    <% end %>
+    <% end %> <!-- /flash tag notice -->
 
 	  <%= yield %>
 
 	  <footer class="footer">
 	  	<h4>&copy; 2017 Bike Tampa - All Rights Reserved</h4>
 	  </footer>
-	  <!-- <div class="modal-backdrop fade in"></div> -->
 
 	 	<!-- ============================= -->
 
