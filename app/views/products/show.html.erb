@@ -1,4 +1,4 @@
-
+<% cache @product do %>
 <h1><%= @product.name %></h1>
 <div class="content">
   <div class="container">
@@ -44,6 +44,7 @@
           <%= form_with(url: '/payments/create') do |form| %>
             <%= render partial: "shared/stripe_checkout_button" %>
           <% end %> <!-- /pay now button -->
+          <% end %> <!-- /cache -->
           <br>
 
           <p><strong>Highest Rating Comment</strong></p>
@@ -72,5 +73,4 @@
     </div> <!-- /back button -->
   </div> <!-- /container -->
   <br>
-
 </div>
