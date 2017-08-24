@@ -33,15 +33,6 @@
           <div class="project-name navbar-brand">
             <%= link_to "Bike Tampa", root_path %>
           </div> <!--/project-name -->
-
-          <!-- search bar -->
-          <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"> 
-          	<div class="form-group">
-           	  <label class="hidden" for="q">Search for:</label>
-          	  <input type="text" name="q" id="q" value="" class="form-control" placeholder="Search">
-        	  </div>
-        		<input type="submit" name="commit" value="Search" class="btn btn-default" data-disable-with="Search">
-					</form> <!-- /search bar -->
         </div> <!-- /navbar-header -->
 
         <div class="navbar-collapse collapse">
@@ -79,13 +70,15 @@
 						    <%= link_to('Login', new_user_session_path) %>
 						  <% end %>        
 						</li> <!-- /user log in/out tab -->
-            <!--
-						<li>
-							<a href="#modalSearch" data-toggle="modal" data-target="#modalSearch">
-                <span id="searchGlyph" class="glyphicon glyphicon-search"></span> <span class="hidden-sm hidden-md hidden-lg">Search</span>
-              </a>
-            -->
-            </li> <!-- /search glyphy -->
+            <li> <!-- search bar -->
+              <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"> 
+                <div class="form-group">
+                  <label class="hidden" for="q">Search for:</label>
+                  <input type="text" name="q" id="q" value="" class="form-control" placeholder="Search">
+                </div>
+                <input type="submit" name="commit" value="Search" class="btn btn-default search-submit" data-disable-with="Search">
+              </form> <!-- /form search bar -->
+            </li> <!-- /search bar -->
           </ul> <!-- /navbar-right -->
         </div> <!-- /navbar-collapse -->
       </div> <!-- /container-fluid --> 
