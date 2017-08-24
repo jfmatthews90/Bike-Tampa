@@ -5,7 +5,7 @@
 
 
 body {
-	padding-top: 60px;
+	padding-top: 40px;
 	background-color: #eee;
 	font-family: Helvetica;
 	padding-bottom: 50px;
@@ -24,6 +24,10 @@ footer {
 	text-align: center;
 	color: #9d9d9d;
 	background-color: #222;
+}
+
+.footer-text {
+	font-size: 1em;
 }
 
 .product-overview {
