@@ -100,4 +100,6 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+  config.web_socket_server_url = "wss://jfm-rails-app.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://jfm-rails-app.herokuapp.com', 'http://jfm-rails-app.herokuapp.com']
 end
