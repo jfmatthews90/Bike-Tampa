@@ -63,15 +63,14 @@
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /show -->
+
     <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-    <div class="product-comments">
+    <div class="col-sm-3 col-md-3 product-comments">
       <%= render 'comments' %>
       <%= will_paginate @comments %>
+      <div class="back-button">
+        <a class="btn btn-default" href="/products">Back to products</a>
+      </div> <!-- /back button -->
     </div> <!-- /product comments -->
-    <br>
-    <div class="back-button">
-      <a class="btn btn-default" href="/products">Back to products</a>
-    </div> <!-- /back button -->
   </div> <!-- /container -->
-  <br>
-</div>
+</div> <!-- /content -->
